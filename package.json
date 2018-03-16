@@ -1,0 +1,32 @@
+{
+  "name": "redux-webpack-practice",
+  "version": "1.0.0",
+  "description": "Redux and webpack practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kendrick004@github.com/kendrick004/redux-webpack-practice.git"
+  },
+  "keywords": [
+    "Redux",
+    "Webpack",
+    "Practice"
+  ],
+  "author": "Kenster Crucillo <kendrick004@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kendrick004/redux-webpack-practice/issues"
+  },
+  "homepage": "https://github.com/kendrick004/redux-webpack-practice#readme",
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
