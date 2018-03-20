@@ -1,12 +1,27 @@
-import _ from 'lodash';
+import $ from 'jquery';
+import { createStore } from 'redux';
+import inputCounter from './redux/reducers';
+import { add, ded } from './redux/actions';
+ 
+let store = createStore(inputCounter);
 
-function component() {
-    var element = document.createElement('div');
+const unsubscribe = store.subscribe(() => {
+    console.log(store.getState());
+});
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+$(document).ready(function(){
 
-    return element;
-}
+    let $num = $('#number');
 
-document.body.appendChild(component());
+    $('#add').click(function(){
+        store.dispatch(add());
+        let state = store.getState();
+        $num.val(state.value);
+    });
+
+    $('#ded').click(function(){
+        store.dispatch(ded());
+        let state = store.getState();
+        $num.val(state.value);
+    });
+});
